@@ -1,10 +1,9 @@
 {
-  "name": "ffmpeg-progressbar",
-  "appId": "de.sidneys.ffmpeg-progressbar",
-  "version": "0.1.2",
-  "description": "FFmpeg Progress Bar",
+  "name": "ffmpeg-progressbar-cli",
+  "version": "1.1.1",
+  "description": "A colored progress bar for FFmpeg. Simply use `ffmpeg-bar` instead of `ffmpeg`.",
   "license": "MIT",
-  "homepage": "https://github.com/sidneys/ffmpeg-progressbar",
+  "homepage": "https://github.com/sidneys/ffmpeg-progressbar-cli",
   "author": {
     "name": "sidneys",
     "email": "sidneys.github.io@outlook.com",
@@ -12,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sidneys/ffmpeg-progressbar.git"
+    "url": "https://github.com/sidneys/ffmpeg-progressbar-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/sidneys/ffmpeg-progressbar/issues"
+    "url": "https://github.com/sidneys/ffmpeg-progressbar-cli/issues"
   },
   "engines": {
     "node": ">=10.0.0"
@@ -26,27 +25,36 @@
     "linux"
   ],
   "keywords": [
-    "FFmpeg"
+    "FFmpeg",
+    "progress bar",
+    "media",
+    "commandline",
+    "terminal"
   ],
   "preferGlobal": true,
   "dependencies": {
-    "cli-progress": "^2.0.0",
+    "app-root-path": "^2.1.0",
+    "cli-progress": "git+https://github.com/AndiDittrich/Node.CLI-Progress.git#master",
+    "colors": "^1.3.1",
+    "ellipsize": "^0.1.0",
     "ini": "^1.3.5",
     "moment": "^2.22.2",
     "moment-duration-format": "^2.2.2",
+    "string-width": "^2.1.1",
     "which": "^1.3.1",
-    "window-size": "^1.1.0"
+    "window-size": "^1.1.1"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
+    "docdash": "^0.4.0",
+    "eslint": "^5.3.0",
     "jsdoc": "^3.5.5"
   },
-  "main": "./index.js",
+  "main": "./lib/main.js",
   "bin": {
-    "ffmpeg-progressbar": "./index.js"
+    "ffmpeg-bar": "./lib/main.js"
   },
   "scripts": {
-    "docs": "./node_modules/.bin/jsdoc --verbose --configure .jsdoc.json",
-    "start": "node ./index.js"
+    "docs": "jsdoc --verbose --configure .jsdoc.json",
+    "start": "node ./lib/main.js"
   }
 }
