@@ -1,6 +1,6 @@
 {
   "name": "ffmpeg-progressbar-cli",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A colored progress bar for FFmpeg. Simply use `ffmpeg-bar` instead of `ffmpeg`.",
   "license": "MIT",
   "homepage": "https://github.com/sidneys/ffmpeg-progressbar-cli",
