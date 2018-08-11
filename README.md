@@ -35,48 +35,49 @@ To use it, simply launch `ffmpeg-bar` instead of `ffmpeg`, or replace  `ffmpeg` 
 
 As long as no errors are encountered, the output of  `ffmpeg-bar` will   consist of a progress bar, the estimated time until process completion and a percentage.
 
-#### Examples
+###### Examples
 
 ```bash
-$ ffmpeg-bar -i input.mp4 output.avi
+$> ffmpeg-bar -i input.mp4 output.avi
 ```
 
 ```bash
-$ ffmpeg-bar -i input.avi -b:v 64k -bufsize 64k output.avi
+$> ffmpeg-bar -i input.avi -b:v 64k -bufsize 64k output.avi
 ```
 
 ```bash
-$ ffmpeg-bar -i in.mkv -map_metadata:s:a 0:g out.mkv
+$> ffmpeg-bar -i in.mkv -map_metadata:s:a 0:g out.mkv
 ```
 
 
 ## <a name="configuration"/></a> Configuration
 
-For configuration purposes, this exposes several environmental variables:
+For configuration purposes, `ffmpeg-progressbar-cli` exposes these environmental variables:
 
 
 ##### `BAR_FILENAME_LENGTH`
+The maximum number of characters of the filename label displayed next to the progress bar beam *(default: 20)*
 
-`(default: 10)` The maximum number of characters of the filename label displayed next to the progress bar beam.
+###### Example
 
+```bash
+$> BAR_FILENAME_LENGTH=7 ffmpeg-bar -i in.mp4 output.mp4
+```
 
 ##### `BAR_BEAM_RATIO `
 
-`default: 0.9` The share of (available) horizontal display real estate the progress bar beam should occupy.
+The share of (available) horizontal display real estate the progress bar beam should occupy *(default: 0.9)*
 
-#### Examples
-
-```bash
-$ BAR_FILENAME_LENGTH=30 ffmpeg-bar -i in.mp4 out.mp4
-```
+###### Example
 
 ```bash
-$ BAR_BAR_SIZE_RATIO=0.5 ffmpeg-bar -i in.mp4 out.mp4
+$> BAR_BAR_SIZE_RATIO=0.5 ffmpeg-bar -i in.mp4 output.mp4
 ```
 
 ## <a name="requirements"/></a> Requirements
 
-A working installation of [FFmpeg](https://ffmpeg.org/).
+ - [Node.js](https://nodejs.org/), v8.11 or later
+ - [FFmpeg](https://ffmpeg.org/), installed correctly
 
 
 ## <a name="compatibility"/></a> Compatibility
