@@ -66,7 +66,7 @@ $> BAR_FILENAME_LENGTH=7 ffmpeg-bar -i in.mp4 output.mp4
 
 ##### `BAR_BEAM_RATIO `
 
-The share of (available) horizontal display real estate the progress bar beam should occupy *(default: 0.9)*
+The share of (available) horizontal display real estate the progress bar beam should occupy *(default: 0.75)*
 
 ###### Example
 
